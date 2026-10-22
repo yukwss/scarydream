@@ -886,14 +886,28 @@
             pointer-events: none !important;
         }
         @media (max-width: 520px) { #monster-hp-label { top: -34px !important; font-size: 11px !important; } }
+
+        /* Обычное игровое окно с постоянным соотношением сторон 4:3. */
+        #game-container {
+            box-sizing: border-box !important;
+            width: min(800px, calc(100vw - 16px)) !important;
+            max-width: calc(100vw - 16px) !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            margin: 8px auto !important;
+            position: relative !important;
+            inset: auto !important;
+            border: 4px solid #333 !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+        }
+        #game-container > * { min-width: 0; }
+        .fullscreen-btn { display: none !important; }
 </style>
 </head>
 <body>
 
     <div id="game-container">
-        <button id="fullscreen-toggle" class="fullscreen-btn" type="button"
-                onclick="toggleGameFullscreen()" title="Enter fullscreen"
-                aria-label="Toggle fullscreen">⛶ FULLSCREEN</button>
         <div id="game-settings" style="position:relative;z-index:5;flex:0 0 auto;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:7px 8px;background:#151515;border-bottom:1px solid #444;font-size:8px">
           <button type="button" id="language-toggle" style="padding:7px;background:#222;color:#fff;border:1px solid #777;cursor:pointer">🌐 EN</button>
           <button type="button" id="music-toggle" style="padding:7px;background:#222;color:#fff;border:1px solid #777;cursor:pointer">♫ Music: ON</button>
