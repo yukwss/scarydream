@@ -665,11 +665,16 @@
         }
         #game-container:fullscreen,
         #game-container:-webkit-full-screen {
+            position: fixed !important;
+            inset: 0 !important;
             width: 100vw !important;
-            max-width: none !important;
+            max-width: 100vw !important;
             height: 100vh !important;
             height: 100dvh !important;
+            min-height: 100vh !important;
+            min-height: 100dvh !important;
             margin: 0 !important;
+            padding: 0 !important;
             border: 0 !important;
             border-radius: 0 !important;
             box-shadow: none !important;
@@ -683,10 +688,13 @@
             inset: 0 !important;
             z-index: 99999 !important;
             width: 100vw !important;
-            max-width: none !important;
+            max-width: 100vw !important;
             height: 100vh !important;
             height: 100dvh !important;
+            min-height: 100vh !important;
+            min-height: 100dvh !important;
             margin: 0 !important;
+            padding: 0 !important;
             border: 0 !important;
             border-radius: 0 !important;
             box-shadow: none !important;
